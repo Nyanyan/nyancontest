@@ -13,6 +13,7 @@ function getCSV(){
  
 // 読み込んだCSVデータを二次元配列に変換する関数convertCSVtoArray()の定義
 function convertCSVtoArray(str){ // 読み込んだCSVデータが文字列として渡される
+    var arg = process.argv;
     var result = []; // 最終的な二次元配列を入れるための配列
     var tmp = str.split("\n"); // 改行を区切り文字として行を要素とした配列を生成
  
@@ -21,6 +22,7 @@ function convertCSVtoArray(str){ // 読み込んだCSVデータが文字列と�
         result[i] = tmp[i].split(',');
     }
  
+    alert(arg)
     alert(result); // 300yen
     //document.getElementById('result').innerHTML = result.join('');
 }
