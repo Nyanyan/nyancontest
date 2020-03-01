@@ -3,7 +3,8 @@ function getCSV(){
     var req = new XMLHttpRequest(); // HTTPでファイルを読み込むためのXMLHttpRrequestオブジェクトを生成
     req.open("get", "../../scramble.csv", true); // アクセスするファイルを指定
     req.send(null); // HTTPリクエストの発行
-	
+    
+    alert(req.responseText);
     // レスポンスが返ってきたらconvertCSVtoArray()を呼ぶ	
     req.onload = function(){
 	convertCSVtoArray(req.responseText); // 渡されるのは読み込んだCSVデータ
