@@ -15,7 +15,3 @@ $(window).load(function () {
 	$("#itemlist").append(itemlist);
     });
 });
-
-(function($) {
-    var arg = process.argv[i]
-})(jQuery);
