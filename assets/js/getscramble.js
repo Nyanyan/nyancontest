@@ -21,7 +21,7 @@ function convertCSVtoArray(str){ // 読み込んだCSVデータが文字列と�
     }
  
     alert(result[1][2]); // 300yen
-    document.getElementById('result').innerHTML = result.join('');
+    //document.getElementById('result').innerHTML = result.join('');
 }
 
 getCSV(); //最初に実行される
