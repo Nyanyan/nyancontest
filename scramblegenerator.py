@@ -23,3 +23,4 @@ for i in range(1, 6):
 with open('scramble.csv', mode='w') as f:
     writer = csv.writer(f, lineterminator='\n')
     writer.writerow(row)
+print('finished generating scramble')
