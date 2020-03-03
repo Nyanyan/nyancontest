@@ -9,9 +9,34 @@
 		<title>NyanContest</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
 		<script src="https://smtpjs.com/v2/smtp.js"></script>
-		<script type="text/javascript" src="getscramble.js"></script>
+
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.8/jquery.csv.min.js"></script>
+		<script>
+			function readCsv(data) {
+				var target = '#csv-body';
+				var csv = $.csv.toArrays(data);
+				var insert = '';
+				$(csv).each(function() {
+					if (this.length > 0) {
+						insert += '<tr>';
+						$(this).each(function() {
+							insert += '<td>' + this + '</td>';
+						});
+						insert += '</tr>';
+					}
+				});
+				$(target).append(insert);
+			}
+			var csvfile = 'data.csv';
+			$(function(){
+				$.get(csvfile, readCsv, 'text');
+			});
+		</script>
+		<link rel="stylesheet" href="../assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
@@ -58,7 +83,13 @@
 										</header>
 										<p>+2の場合は+2をした後の最終的なタイムを、DNFの場合はDNFと書いてください。</p>
 										<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNs5H8dzfoZe0IWXMx4AujhDipY2MYe6LoJtdKusxlNN1QWA/viewform?embedded=true" width="640" height="1114" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
-										
+										<table>
+											<caption>紫陽花の名所</caption>
+											<thead>
+												<tr><th>名前</th><th>場所</th><th>種類</th><th>株数</th></tr>
+											</thead>
+											<tbody id='csv-body' />
+										</table>
 								</section>
 							<!-- Section -->
 							<!--

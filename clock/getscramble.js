@@ -23,8 +23,8 @@ function convertCSVtoArray(str){ // 読み込んだCSVデータが文字列と�
     }
  
     //alert(arg);
-    //alert(result); // 300yen
-    //document.getElementById('result').innerHTML = result.join('');
+    alert(result); // 300yen
+    document.getElementById('result').innerHTML = result.join('');
 }
 
 getCSV(); //最初に実行される
