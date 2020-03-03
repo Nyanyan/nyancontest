@@ -17,16 +17,12 @@ function convertArray(data) {
         dataArray[i] = dataString[i].split(',');
     }
     let insertElement = '';
-    let flag = false;
     dataArray.forEach((element) => {
-        //insertElement += '<tr>';
+        insertElement += '<tr>';
         element.forEach((childElement) => {
-            alert(childElement)
+            insertElement += `<td>${childElement}</td>`
         });
-        if (flag){
-            break
-        }
-        //insertElement += '</tr>';
+        insertElement += '</tr>';
     });
     //alert(insertElement)
     outputElement.innerHTML = insertElement;
