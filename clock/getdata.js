@@ -1,16 +1,13 @@
-$.when(
-    $.ajax({
-        url: 'data.csv',
-        cache: false,
-        dataType: "text",
-        beforeSend : function(xhr) {
-            xhr.overrideMimeType('text/plain;charset=Shift_JIS');
-        },
-    })
-)
-.done(function(data) {
-    data=$.csv()(data[0]);
-})
-.fail(function() {
-    alert("データベースの読み込みエラーが発生しました。");
-});
+const outputElement = document.getElementById('output_csv');
+
+function getCsvData(dataPath) {
+ const request = new XMLHttpRequest();
+ request.addEventListener('load', (event) => {
+  const response = event.target.responseText;
+  outputElement.innerHTML = response;
+ });
+ request.open('GET', dataPath, true);
+ request.send();
+}
+
+getCsvData('data.csv');

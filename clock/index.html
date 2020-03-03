@@ -15,27 +15,8 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.8/jquery.csv.min.js"></script>
-		<script>
-			function readCsv(data) {
-				var target = '#csv-body';
-				var csv = $.csv.toArrays(data);
-				var insert = '';
-				$(csv).each(function() {
-					if (this.length > 0) {
-						insert += '<tr>';
-						$(this).each(function() {
-							insert += '<td>' + this + '</td>';
-						});
-						insert += '</tr>';
-					}
-				});
-				$(target).append(insert);
-			}
-			var csvfile = 'data.csv';
-			$(function(){
-				$.get(csvfile, readCsv, 'text');
-			});
-		</script>
+		<script src="getdata.js"></script>
+		
 		<link rel="stylesheet" href="../assets/css/main.css" />
 	</head>
 	<body class="is-preload">
@@ -83,13 +64,7 @@
 										</header>
 										<p>+2の場合は+2をした後の最終的なタイムを、DNFの場合はDNFと書いてください。</p>
 										<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNs5H8dzfoZe0IWXMx4AujhDipY2MYe6LoJtdKusxlNN1QWA/viewform?embedded=true" width="640" height="1114" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
-										<table>
-											<caption>紫陽花の名所</caption>
-											<thead>
-												<tr><th>名前</th><th>場所</th><th>種類</th><th>株数</th></tr>
-											</thead>
-											<tbody id='csv-body' />
-										</table>
+										<div id="output_csv"></div>
 								</section>
 							<!-- Section -->
 							<!--
