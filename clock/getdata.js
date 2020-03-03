@@ -1,4 +1,4 @@
-const outputElement = document.getElementById('ranking');
+const outputElement1 = document.getElementById('ranking');
 
 function getCsvData(dataPath) {
     const request = new XMLHttpRequest();
@@ -24,7 +24,7 @@ function convertArray(data) {
         });
         insertElement += '</tr>';
     });
-    outputElement.innerHTML = insertElement;
+    outputElement1.innerHTML = insertElement;
 }
 
 getCsvData('data.csv');
