@@ -19,6 +19,7 @@ function convertArray2(data) {
     let insertElement = '';
     dataArray.forEach((element) => {
         element.forEach((childElement) => {
+            console.log(childElement)
             insertElement += `<tr><td>${childElement}</td></tr>`
         });
     });
