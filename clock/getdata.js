@@ -1,16 +1,16 @@
 const outputElement1 = document.getElementById('ranking');
 
-function getCsvData(dataPath) {
+function getCsvData1(dataPath) {
     const request = new XMLHttpRequest();
     request.addEventListener('load', (event) => {
         const response = event.target.responseText;
-        convertArray(response);
+        convertArray1(response);
     });
     request.open('GET', dataPath, true);
     request.send();
 }
 
-function convertArray(data) {
+function convertArray1(data) {
     const dataArray = [];
     const dataString = data.split('\n');
     for (let i = 0; i < dataString.length; i++) {
@@ -27,4 +27,4 @@ function convertArray(data) {
     outputElement1.innerHTML = insertElement;
 }
 
-getCsvData('data.csv');
+getCsvData1('data.csv');

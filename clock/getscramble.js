@@ -1,16 +1,16 @@
 const outputElement2 = document.getElementById('scramble');
 
-function getCsvData(dataPath) {
+function getCsvData2(dataPath) {
     const request = new XMLHttpRequest();
     request.addEventListener('load', (event) => {
         const response = event.target.responseText;
-        convertArray(response);
+        convertArray2(response);
     });
     request.open('GET', dataPath, true);
     request.send();
 }
 
-function convertArray(data) {
+function convertArray2(data) {
     const dataArray = [];
     const dataString = data.split('\n');
     for (let i = 0; i < dataString.length; i++) {
@@ -26,4 +26,4 @@ function convertArray(data) {
     outputElement2.innerHTML = insertElement;
 }
 
-getCsvData('../scramble.csv');
+getCsvData2('../scramble.csv');
