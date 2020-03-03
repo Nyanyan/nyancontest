@@ -17,11 +17,19 @@ function convertArray2(data) {
         dataArray[i] = dataString[i].split(',');
     }
     let insertElement = '';
+    let flag = false;
     dataArray.forEach((element) => {
         element.forEach((childElement) => {
-            console.log(childElement)
-            insertElement += `<tr><td>${childElement}</td></tr>`
+            if (childElement == 'Clock'){
+                flag = true
+            }
+            if (flag){
+                insertElement += `<tr><td>${childElement}</td></tr>`
+            }
         });
+        if (flag){
+            break
+        }
     });
     //alert(insertElement)
     outputElement2.innerHTML = insertElement;
