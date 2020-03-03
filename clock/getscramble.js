@@ -30,7 +30,7 @@ function convertArray2(data) {
             }
         });
         if (flag){
-            break
+            flag = false
         }
     });
     //alert(insertElement)
