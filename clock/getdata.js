@@ -1,4 +1,4 @@
-const outputElement = document.getElementById('output_csv');
+const outputElement = document.getElementById('getdata');
 
 function getCsvData(dataPath) {
  const request = new XMLHttpRequest();
