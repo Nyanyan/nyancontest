@@ -1,7 +1,7 @@
 import csv
 import os
 import pandas as pd
-import urllib
+import urllib.request
 def generatescramble(session):
     #res = subprocess.call('java -jar TNoodle-WCA-0.15.1.jar')
     #print(res)
