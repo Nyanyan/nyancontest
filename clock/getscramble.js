@@ -23,6 +23,8 @@ function convertArray2(data) {
             if (childElement == 'Clock'){
                 flag = true
             }
+            console.log(childElement)
+            console.log(flag)
             if (flag){
                 insertElement += `<tr><td>${childElement}</td></tr>`
             }
