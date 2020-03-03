@@ -27,4 +27,5 @@ function convertArray(data) {
  outputElement.innerHTML = insertElement;
 }
 
+alert('getting data')
 getCsvData('data.csv');
