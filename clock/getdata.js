@@ -24,7 +24,7 @@ function convertArray(data) {
         });
         insertElement += '</tr>';
     });
-    alert(insertElement)
+    //alert(insertElement)
     outputElement.innerHTML = insertElement;
 }
 
