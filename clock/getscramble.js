@@ -28,4 +28,4 @@ function convertArray(data) {
     outputElement.innerHTML = insertElement;
 }
 
-getCsvData('../scramble.csv');
+getCsvData('data.csv');
