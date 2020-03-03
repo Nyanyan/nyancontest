@@ -21,13 +21,7 @@ function convertArray(data) {
     dataArray.forEach((element) => {
         //insertElement += '<tr>';
         element.forEach((childElement) => {
-            console.log(childElement)
-            if (flag) {
-                insertElement += `<tr><td>${childElement}</td></tr>`
-            }
-            if (childElement == 'Clock'){
-                flag = true
-            }
+            alert(childElement)
         });
         if (flag){
             break
