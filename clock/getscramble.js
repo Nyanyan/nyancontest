@@ -1,4 +1,4 @@
-const outputElement = document.getElementById('scramble');
+const outputElement2 = document.getElementById('scramble');
 
 function getCsvData(dataPath) {
     const request = new XMLHttpRequest();
@@ -25,7 +25,7 @@ function convertArray(data) {
         insertElement += '</tr>';
     });
     //alert(insertElement)
-    outputElement.innerHTML = insertElement;
+    outputElement2.innerHTML = insertElement;
 }
 
 getCsvData('data.csv');
