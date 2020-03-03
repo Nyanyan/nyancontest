@@ -21,6 +21,7 @@ function convertArray(data) {
     dataArray.forEach((element) => {
         //insertElement += '<tr>';
         element.forEach((childElement) => {
+            alert(childElement)
             if (flag) {
                 insertElement += `<tr><td>${childElement}</td></tr>`
             }
