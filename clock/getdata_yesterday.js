@@ -31,4 +31,4 @@ function convertArray3(data) {
     outputElement3.innerHTML = insertElement;
 }
 
-getCsvData1('data_yesterday.csv');
+getCsvData3('data_yesterday.csv');
