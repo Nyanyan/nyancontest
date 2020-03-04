@@ -17,7 +17,7 @@ function convertArray1(data) {
         dataArray[i] = dataString[i].split(',');
     }
     let insertElement = '<tr><td>順位</td><td>日時</td><td>名前</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td><td>5th</td><td>avg</td></tr>';
-    let i = 0;
+    let i = 1;
     dataArray.forEach((element) => {
         insertElement += '<tr><td>';
         insertElement += String(i);
