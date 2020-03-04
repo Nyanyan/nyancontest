@@ -1,6 +1,6 @@
 const outputElement3 = document.getElementById('ranking_yesterday');
 
-function getCsvData1(dataPath) {
+function getCsvData3(dataPath) {
     const request = new XMLHttpRequest();
     request.addEventListener('load', (event) => {
         const response = event.target.responseText;
@@ -10,7 +10,7 @@ function getCsvData1(dataPath) {
     request.send();
 }
 
-function convertArray1(data) {
+function convertArray3(data) {
     const dataArray = [];
     const dataString = data.split('\n');
     for (let i = 0; i < dataString.length; i++) {
