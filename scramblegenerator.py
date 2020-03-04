@@ -2,6 +2,7 @@ import csv
 import os
 import pandas as pd
 import urllib.request
+import time
 def generatescramble(session):
     #res = subprocess.call('java -jar TNoodle-WCA-0.15.1.jar')
     #print(res)
@@ -15,11 +16,18 @@ def generatescramble(session):
     return scramble
 
 sessions = ['3x3', '2x2', '4x4', '5x5', '6x6', '7x7', '3BLD', '3OH', 'Clock', 'Megaminx', 'Pyraminx', 'Skewb', 'Square-1', '4BLD', '5BLD']
+timeout = 10
 
 session = 8 #clock
 row = [sessions[session]]
-for i in range(1, 6):
-    row.append(generatescramble(session))
+while len(row) < 6:
+    start = time.time()
+    for i in range(1, 6):
+        row.append(generatescramble(session))
+        if time.time() - start > timeout:
+            row = [sessions[session]]
+            print('retry')
+            break
 with open('scramble.csv', mode='w') as f:
     writer = csv.writer(f, lineterminator='\n')
     writer.writerow(row)

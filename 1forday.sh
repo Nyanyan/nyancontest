@@ -6,5 +6,6 @@ git add scramble.csv
 git commit -m 'update scramble'
 python3 deletedata.py
 git add clock/data.csv
-git commit -m 'deleted data'
+git add clock/data_yesterday.csv
+git commit -m 'updated data'
 git push origin master
