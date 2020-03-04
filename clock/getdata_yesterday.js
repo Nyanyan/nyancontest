@@ -1,4 +1,4 @@
-const outputElement3 = document.getElementById('ranking_lastday');
+const outputElement3 = document.getElementById('ranking_yesterday');
 
 function getCsvData1(dataPath) {
     const request = new XMLHttpRequest();
@@ -31,4 +31,4 @@ function convertArray1(data) {
     outputElement3.innerHTML = insertElement;
 }
 
-getCsvData1('data_lastday.csv');
+getCsvData1('data_yesterday.csv');
