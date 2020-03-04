@@ -4,7 +4,7 @@ function getCsvData3(dataPath) {
     const request = new XMLHttpRequest();
     request.addEventListener('load', (event) => {
         const response = event.target.responseText;
-        convertArray1(response);
+        convertArray3(response);
     });
     request.open('GET', dataPath, true);
     request.send();
