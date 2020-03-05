@@ -22,7 +22,7 @@ with open("scramble.csv", 'r', encoding="utf-8", errors="ignore") as f:
     scramblearr = list(csv.reader(f))
 flag = False
 for i in range(len(scramblearr)):
-    if scramblearr[i][0] == 'Clock':
+    if scramblearr[i][0] == event:
         flag = True
     if flag:
         for j in range(len(scramblearr[i])):
