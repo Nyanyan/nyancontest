@@ -52,10 +52,12 @@ for i in range(len(yrankingarr)):
     yranking += '</tr>'
 html = html.replace('RANKINGYESTERDAY_REPLACE_HERE', yranking)
 
-form = []
 if event == 'Clock':
     googleform = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdNs5H8dzfoZe0IWXMx4AujhDipY2MYe6LoJtdKusxlNN1QWA/formResponse"
     form = ["entry.1460875154", "entry.39328532", "entry.975282763", "entry.673200780", "entry.1826089930", "entry.75959801"]
+elif event == '3x3':
+    googleform = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfec5JC5vKDGeuY31i82-wS7h2bOz0a80K66ExTVK_AW-BU1w/formResponse"
+    form = ["entry.124718628", "entry.595343204", "entry.772823004", "entry.967262556", "entry.1547065456", "entry.1566696308"]
 html = html.replace('GOOGLEFORM_REPLACE_HERE', '"' + googleform + '"')
 html = html.replace('NAME_REPLACE_HERE', '"' + form[0] + '"')
 for i in range(1, len(form)):
