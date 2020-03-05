@@ -1,14 +1,8 @@
 <html>
     <p>aaaaau</p>
-    <div id="common"></div>
     <script>
-        w=window.open("competition.html","tmp","width=100,height=100")
-        document.all("common").innerHTML=w.document.all[0].innerHTML
-        w.close()
-    </script> 
-    
-    <script src="load.js"></script>
-    <script>
-        include("competition.html")
+        $(function(){
+            $("#cover").load("competition.html");
+        });
     </script>
 </html>
