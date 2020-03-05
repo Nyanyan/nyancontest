@@ -11,6 +11,8 @@ with open("competitionformat.html", 'r',encoding="utf-8") as f:
 
 html = html.replace('EVENT_REPLACE_HERE', event)
 
+html = html.replace('ICON_REPLACE_HERE', '../images/' + event + '.png')
+
 date = ''
 with open("date.txt", 'r', encoding="utf-8") as f:
     date = f.read()
