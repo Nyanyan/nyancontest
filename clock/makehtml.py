@@ -1,10 +1,13 @@
 import csv
+
+args = sys.argv
+
 html = ''
 with open("../competitionformat.html", 'r',encoding="utf-8") as f:
     html = f.read()
 #html = html.replace('SCRIPT_REPLACE_HERE', '            <script src="getdata.js"></script>\n            <script src="getdata_yesterday.js"></script>\n          <script src="getdate.js"></script>\n            <script src="getscramble.js"></script>')
 
-event = 'Clock'
+event = args[1]
 html = html.replace('EVENT_REPLACE_HERE', event)
 
 date = ''
@@ -18,7 +21,7 @@ with open("../scramble.csv", 'r', encoding="utf-8") as f:
     scramblearr = list(csv.reader(f))
 flag = False
 for i in range(len(scramblearr)):
-    if scramblearr[i][0] == 'Clock':
+    if scramblearr[i][0] == event:
         flag = True
     if flag:
         for j in range(len(scramblearr[i])):
