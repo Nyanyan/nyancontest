@@ -61,7 +61,7 @@
 										<h2>タイム入力</h2>
 										<p>+2の場合は+2をした後の最終的なタイムを、DNFの場合はDNFと書いてください。</p>
 										
-										<form onsubmit="submitdata()" action="https://docs.google.com/forms/d/e/1FAIpQLSdNs5H8dzfoZe0IWXMx4AujhDipY2MYe6LoJtdKusxlNN1QWA/viewform?usp=sf_link">
+										<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdNs5H8dzfoZe0IWXMx4AujhDipY2MYe6LoJtdKusxlNN1QWA/formResponse" target="_self" method="POST" id="mG61Hd">
 											<label for="name">名前</label>
 											<input id="name" type="text" name="entry.1460875154" placeholder="Nyanyan" required>
 											<label for="name">1st</label>
@@ -74,8 +74,15 @@
 											<input id="4th" type="text" name="entry.1826089930" placeholder="1:23.456" required>
 											<label for="name">5th</label>
 											<input id="5th" type="text" name="entry.75959801" placeholder="1:23.456" required>
-											<button class="button big" type="submit" name="button">送信</button>
+											<button class="button big" type="submit" name="button" onclick="submitForm()">送信</button>
 										</form>
+										<script>
+											function submitForm(){
+												document.myForm.submit();
+												document.getElementById('formWrapper').style.display = 'none';
+												document.getElementById('thxMessage').style.display = 'block';
+											}
+										</script>
 										
 										<!--<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNs5H8dzfoZe0IWXMx4AujhDipY2MYe6LoJtdKusxlNN1QWA/viewform?embedded=true" width="500" height="1300" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>-->
 										<h2>ランキング</h2>
@@ -236,7 +243,6 @@
 			<script src="getscramble.js"></script>
 			<script src="getdate.js"></script>
 			<script src="getdata_yesterday.js"></script>
-			<script src="submit.js"></script>
 
 	</body>
 </html>
