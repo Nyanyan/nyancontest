@@ -1,10 +1,13 @@
 import csv
 <<<<<<< HEAD:makehtml.py
+<<<<<<< HEAD:makehtml.py
 import sys
 
 args = sys.argv
 event = args[1]
 
+=======
+>>>>>>> parent of f5e9350... cleaning:clock/makehtml.py
 =======
 >>>>>>> parent of f5e9350... cleaning:clock/makehtml.py
 html = ''
@@ -13,6 +16,10 @@ with open("competitionformat.html", 'r',encoding="utf-8") as f:
 #html = html.replace('SCRIPT_REPLACE_HERE', '            <script src="getdata.js"></script>\n            <script src="getdata_yesterday.js"></script>\n          <script src="getdate.js"></script>\n            <script src="getscramble.js"></script>')
 
 <<<<<<< HEAD:makehtml.py
+<<<<<<< HEAD:makehtml.py
+=======
+event = 'Clock'
+>>>>>>> parent of f5e9350... cleaning:clock/makehtml.py
 =======
 event = 'Clock'
 >>>>>>> parent of f5e9350... cleaning:clock/makehtml.py
