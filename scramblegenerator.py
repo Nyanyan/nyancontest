@@ -15,7 +15,7 @@ def generatescramble(session):
     print(scramble)
     return scramble
 
-with open('scramble.csv', mode='a') as f:
+with open('scramble.csv', mode='w') as f:
     f.write('')
 
 sessions = ['3x3', '2x2', '4x4', '5x5', '6x6', '7x7', '3BLD', '3OH', 'Clock', 'Megaminx', 'Pyraminx', 'Skewb', 'Square-1', '4BLD', '5BLD']
