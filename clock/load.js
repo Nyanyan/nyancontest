@@ -1,3 +1,8 @@
+$(document).ready(function() {
+    $.ajaxSetup({cache:false});
+    $('#body').load('competition.html');
+});
+
 const outputElement3 = document.getElementById('ranking_yesterday');
 
 function getCsvData3(dataPath) {
@@ -32,8 +37,3 @@ function convertArray3(data) {
 }
 
 getCsvData3('data_yesterday.csv');
-
-$(document).ready(function() {
-    $.ajaxSetup({cache:false});
-    $('#body').load('competition.html');
-});
