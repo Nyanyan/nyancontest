@@ -60,27 +60,28 @@
 										</table>
 										<h2>タイム入力</h2>
 										<p>+2の場合は+2をした後の最終的なタイムを、DNFの場合はDNFと書いてください。</p>
-										
-										<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdNs5H8dzfoZe0IWXMx4AujhDipY2MYe6LoJtdKusxlNN1QWA/formResponse" target="_self" method="POST" id="mG61Hd">
-											<label for="name">名前</label>
-											<input id="name" type="text" name="entry.1460875154" placeholder="Nyanyan" required>
-											<label for="name">1st</label>
-											<input id="1st" type="text" name="entry.39328532" placeholder="1:23.456" required>
-											<label for="name">2nd</label>
-											<input id="2nd" type="text" name="entry.975282763" placeholder="1:23.456" required>
-											<label for="name">3rd</label>
-											<input id="3rd" type="text" name="entry.673200780" placeholder="1:23.456" required>
-											<label for="name">4th</label>
-											<input id="4th" type="text" name="entry.1826089930" placeholder="1:23.456" required>
-											<label for="name">5th</label>
-											<input id="5th" type="text" name="entry.75959801" placeholder="1:23.456" required>
-											<button class="button big" type="submit" name="button" onclick="submitForm()">送信</button>
-										</form>
+										<div id="formWrapper">
+											<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdNs5H8dzfoZe0IWXMx4AujhDipY2MYe6LoJtdKusxlNN1QWA/formResponse" target="_self" method="POST" id="mG61Hd">
+												<label for="name">名前</label>
+												<input id="name" type="text" name="entry.1460875154" placeholder="Nyanyan" required>
+												<label for="name">1st</label>
+												<input id="1st" type="text" name="entry.39328532" placeholder="1:23.456" required>
+												<label for="name">2nd</label>
+												<input id="2nd" type="text" name="entry.975282763" placeholder="1:23.456" required>
+												<label for="name">3rd</label>
+												<input id="3rd" type="text" name="entry.673200780" placeholder="1:23.456" required>
+												<label for="name">4th</label>
+												<input id="4th" type="text" name="entry.1826089930" placeholder="1:23.456" required>
+												<label for="name">5th</label>
+												<input id="5th" type="text" name="entry.75959801" placeholder="1:23.456" required>
+												<input class="btn btn-success" type="button" value="送信" onclick="submitForm()"/>
+											</form>
+											<iframe name="dummyIframe" style="display:none;"></iframe>
+										</div>
 										<script>
 											function submitForm(){
 												document.myForm.submit();
 												document.getElementById('formWrapper').style.display = 'none';
-												document.getElementById('thxMessage').style.display = 'block';
 											}
 										</script>
 										
