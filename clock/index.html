@@ -1,12 +1,15 @@
 <html>
     <meta charset="utf-8">
-    <p>aaaaau</p>
-    <div id="header"></div>
+    <div id="body"></div>
     <script src="../assets/js/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $.ajaxSetup({cache:false}); //なくても良いがキャッシュを読み込まないように?
-            $('#header').load('competition.html');
+            $.ajaxSetup({cache:false});
+            $('#body').load('competition.html');
         });
     </script>
+    <script src="getdata.js"></script>
+    <script src="getscramble.js"></script>
+    <script src="getdate.js"></script>
+    <script src="getdata_yesterday.js"></script>
 </html>
