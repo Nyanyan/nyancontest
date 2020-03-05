@@ -3,11 +3,11 @@ import os
 import pandas as pd
 import urllib.request
 import time
-def generatescramble(session):
+def generatescramble(i):
     #res = subprocess.call('java -jar TNoodle-WCA-0.15.1.jar')
     #print(res)
     string = ['333', '222', '444', '555', '666', '777', '333ni', '333', 'clock', 'minx', 'pyram', 'skewb', 'sq1', '444ni', '555ni']
-    response = urllib.request.urlopen('http://localhost:2014/scramble/.txt?e=' + string[session])
+    response = urllib.request.urlopen('http://localhost:2014/scramble/.txt?e=' + string[i])
     scramble = response.read().decode('utf8', 'ignore').rstrip(os.linesep)
     scramble = ''.join(scramble.splitlines())
     response.close()
@@ -18,24 +18,26 @@ def generatescramble(session):
 with open('scramble.csv', mode='w') as f:
     f.write('')
 
-sessions = ['3x3', '2x2', '4x4', '5x5', '6x6', '7x7', '3BLD', '3OH', 'Clock', 'Megaminx', 'Pyraminx', 'Skewb', 'Square-1', '4BLD', '5BLD']
+wca = ['3x3', '2x2', '4x4', '5x5', '6x6', '7x7', '3BLD', '3OH', 'Clock', 'Megaminx', 'Pyraminx', 'Skewb', 'Square-1', '4BLD', '5BLD']
+events = ['Clock', 'Mirror3x3']
 timeout = 10
-events = [0, 1, 8]
+scrambleevent = [8, 0]
 
-for session in events:
+for i in range(len(events)):
     #session = 8 #clock
-    row = [sessions[session]]
-    while len(row) < 6:
-        start = time.time()
-        for i in range(1, 6):
-            row.append(generatescramble(session))
-            if time.time() - start > timeout:
-                row = [sessions[session]]
-                print('retry')
-                time.sleep(10)
-                break
-    with open('scramble.csv', mode='a') as f:
-        writer = csv.writer(f, lineterminator='\n')
-        writer.writerow(row)
-    time.sleep(10)
+    row = [events[i]]
+    if scrambleevent[i] < 15:
+        while len(row) < 6:
+            start = time.time()
+            for _ in range(1, 6):
+                row.append(generatescramble(scrambleevent[i]))
+                if time.time() - start > timeout:
+                    row = [events[i]]
+                    print('retry')
+                    time.sleep(10)
+                    break
+        with open('scramble.csv', mode='a') as f:
+            writer = csv.writer(f, lineterminator='\n')
+            writer.writerow(row)
+        time.sleep(10)
 print('finished generating scramble')
