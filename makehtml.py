@@ -18,7 +18,7 @@ html = html.replace('DATE_REPLACE_HERE', date)
 
 scramble = ''
 scramblearr = []
-with open("scramble.csv", 'r', encoding="utf-8", errors="ignore") as f:
+with open("scramble.csv", 'r', encoding="cp932", errors="ignore") as f:
     scramblearr = list(csv.reader(f))
 flag = False
 for i in range(len(scramblearr)):
@@ -32,7 +32,7 @@ html = html.replace('SCRAMBLE_REPLACE_HERE', scramble)
 
 ranking = ''
 rankingarr = []
-with open(event + "/data.csv", 'r', encoding="utf-8", errors="ignore") as f:
+with open(event + "/data.csv", 'r', encoding="cp932", errors="ignore") as f:
     rankingarr = list(csv.reader(f))
 for i in range(len(rankingarr)):
     ranking += '<tr>'
@@ -43,7 +43,7 @@ html = html.replace('RANKING_REPLACE_HERE', ranking)
 
 yranking = ''
 yrankingarr = []
-with open(event + "/data_yesterday.csv", 'r', encoding="utf-8", errors="ignore") as f:
+with open(event + "/data_yesterday.csv", 'r', encoding="cp932", errors="ignore") as f:
     yrankingarr = list(csv.reader(f))
 for i in range(len(yrankingarr)):
     yranking += '<tr>'
