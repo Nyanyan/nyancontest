@@ -1,4 +1,5 @@
 function submitdata(){
+    alert("submitting");
     var data = new FormData;
     // data.append(name属性, 値);
     data.append("entry.1460875154", value);
@@ -25,4 +26,5 @@ function submitdata(){
             }
         }
     });
+    alert("fin");
 }
