@@ -54,7 +54,9 @@ html = html.replace('RANKINGYESTERDAY_REPLACE_HERE', yranking)
 
 form = []
 if event == 'Clock':
+    googleform = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdNs5H8dzfoZe0IWXMx4AujhDipY2MYe6LoJtdKusxlNN1QWA/formResponse"
     form = ["entry.1460875154", "entry.39328532", "entry.975282763", "entry.673200780", "entry.1826089930", "entry.75959801"]
+html = html.replace('GOOGLEFORM_REPLACE_HERE', '"' + googleform + '"')
 html = html.replace('NAME_REPLACE_HERE', '"' + form[0] + '"')
 for i in range(1, len(form)):
     html = html.replace(str(i) + '_REPLACE_HERE', '"' + form[i] + '"')
