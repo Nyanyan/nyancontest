@@ -20,7 +20,7 @@ with open('scramble.csv', mode='w') as f:
 
 sessions = ['3x3', '2x2', '4x4', '5x5', '6x6', '7x7', '3BLD', '3OH', 'Clock', 'Megaminx', 'Pyraminx', 'Skewb', 'Square-1', '4BLD', '5BLD']
 timeout = 10
-events = [0, 1, 8, 13, 14]
+events = [0, 1, 8]
 
 for session in events:
     #session = 8 #clock
