@@ -19,10 +19,10 @@ function submitdata(){
         type: 'POST',
         statusCode: {
             0: function () {
-                // 成功
+                alert("送信が完了しました\n反映まで数分お待ち下さい")
             },
             200: function () {
-                // エラー
+                alert("送信に失敗しました");
             }
         }
     });
