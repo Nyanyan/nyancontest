@@ -5,4 +5,5 @@ $(document).ready(function() {
     $('#body').append('<script src="getscramble.js"></script>');
     $('#body').append('<script src="getdate.js"></script>');
     $('#body').append('<script src="getdata_yesterday.js"></script>');
+    alert($('#body'));
 });
