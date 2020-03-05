@@ -46,7 +46,7 @@ for i in range(len(yrankingarr)):
     for j in range(len(yrankingarr[i])):
         yranking += '<td>' + str(yrankingarr[i][j]) + '</td>'
     yranking += '</tr>'
-html = html.replace('YRANKING_REPLACE_HERE', yranking)
+html = html.replace('RANKINGYESTERDAY_REPLACE_HERE', yranking)
 
 
 
