@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
+		<meta http-equiv="Pragma" content="no-cache">
 	</head>
 	<body class="is-preload">
 
@@ -36,16 +37,125 @@
 								<section id="banner">
 									<div class="content">
 										<header>
-											<h1>NyanContest</h1>
-											<p>マイナー競技と非公式競技に特化したオンラインコンテスト</p>
+											<h1>SuperFloppy</h1>
+											<p>NyanContest SuperFloppy競技</p>
 										</header>
-										<p>毎日開催するスピードキューブのオンラインコンテストです。ぜひご参加ください。</p>
-										<p>現在コンテストは開催されていません。コンテスト開催時間は毎日0:15から23:45です。</p>
+										<!--<h2 id="date"></h2>-->
+										<h2>2020/3/6</h2>
+										<p>タイムの反映には1分-2分ほどかかります。タイム入力後2分ほどしましたらページをリロードしてください。その際フォームの再送信をしないようお気をつけください。それでも結果が反映されない場合はスーパーリロードをしてください。どうしても結果が反映されないときはTwitterなどでお知らせください。</p>
+										<ul class="actions">
+											<li><a href="#competition" class="button big">競技開始</a></li>
+										</ul>
 									</div>
 									<span class="image object">
-										<img src="../images/top.png" alt="" />
+										<img src=../images/SuperFloppy.png alt="" />
 									</span>
 								</section>
+						
+							<!-- Section -->
+								<section>
+									<article id="competition">
+                                        <h2>スクランブル</h2>
+                                        <table>
+                                            <tr><td>SuperFloppy</td></tr><tr><td>R' B2 L' F2 L' B L2 F L2 F' R B' L' B2 L2 B' F2 L2 F2 B' </td></tr><tr><td>F B2 R2 B' L B2 R' B' L2 B R2 B' L2 B' F R2 F B2 L' R2 </td></tr><tr><td>R L2 F' B' L2 F' R' L2 F2 B2 R2 F2 B R' F L F2 B2 R B </td></tr><tr><td>R' B' R L F L2 F2 B R2 B2 L2 R2 F B L F' R2 B2 F' R' </td></tr><tr><td>B F' R2 L2 F' R B2 R' L' B L' B2 R F2 B' R' F R' F L2 </td></tr>
+                                        </table>
+                                        <!---
+										<table>
+											<tbody id="scramble"></tbody>
+                                        </table>
+                                        -->
+										<h2>タイム入力</h2>
+										<p>+2の場合は+2をした後の最終的なタイムを、DNFの場合はDNFと書いてください。</p>
+										<div id="formWrapper">
+											<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdfngAyjbxqElCEQakGbSv8k17YMAv-mlyzS62dSh10MC79jA/formResponse" method="post" name="myForm" target="dummyIframe">
+												<label for="name">名前</label>
+												<input id="name" type="text" name="entry.1853627703" placeholder="Nyanyan" required>
+												<label for="name">1st</label>
+												<input id="1st" type="text" name="entry.1755529497" placeholder="1:23.456" required>
+												<label for="name">2nd</label>
+												<input id="2nd" type="text" name="entry.307956320" placeholder="1:23.456" required>
+												<label for="name">3rd</label>
+												<input id="3rd" type="text" name="entry.869891293" placeholder="1:23.456" required>
+												<label for="name">4th</label>
+												<input id="4th" type="text" name="entry.2034438629" placeholder="1:23.456" required>
+												<label for="name">5th</label>
+												<input id="5th" type="text" name="entry.1023457257" placeholder="1:23.456" required>
+												<input class="btn btn-success" type="button" value="送信" onclick="submitForm()"/>
+											</form>
+											<iframe name="dummyIframe" style="display:none;"></iframe>
+										</div>
+										<div id="thxMessage" style="display:none;"><p>送信が完了しました。結果反映まで数分お待ち下さい。</p></div>
+										<script src="../submit.js"></script>
+										<!--<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNs5H8dzfoZe0IWXMx4AujhDipY2MYe6LoJtdKusxlNN1QWA/viewform?embedded=true" width="500" height="1300" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>-->
+										<h2>ランキング</h2>
+										<table>
+                                            <!--<tbody id="ranking"></tbody>-->
+                                            <tr><td>2020/03/06 0:04:47</td><td>せかんどてすと</td><td>0.0</td><td>1.0</td><td>2.0</td><td>3.0</td><td>4.0</td><td>2.0</td></tr><tr><td>2020/03/06 0:03:21</td><td>1st 繝繧ｹ繝</td><td>1.0</td><td>2.0</td><td>3.0</td><td>4.0</td><td>5.0</td><td>3.0</td></tr><tr><td>2020/03/06 12:32:21</td><td>すーぱーふろっぴーてすと</td><td>2.0</td><td>3.0</td><td>4.0</td><td>5.0</td><td>6.0</td><td>4.0</td></tr><tr><td>2020/03/06 0:06:46</td><td>さーどてすと</td><td>DNF</td><td>1.0</td><td>2.0</td><td>5.0</td><td>7.0</td><td>4.667</td></tr><tr><td>2020/03/06 10:18:48</td><td>あさてすと</td><td>DNF</td><td>1.234</td><td>5.678</td><td>9.012</td><td>3.456</td><td>6.049</td></tr>
+										</table>
+										<h2>昨日のランキング</h2>
+										<table>
+                                            <tr><td><<<<<<< HEAD</td></tr><tr><td>2020/03/05 13:25:03</td><td>a</td><td>1.0</td><td>1.0</td><td>1.0</td><td>1.0</td><td>1.0</td><td>1.0</td></tr><tr><td>2020/03/05 13:54:49</td><td>Nyanyansidhaichixz</td><td>1.0</td><td>1.0</td><td>1.0</td><td>1.0</td><td>1.0</td><td>1.0</td></tr><tr><td>2020/03/05 17:16:28</td><td>これはてすと</td><td>1.0</td><td>1.0</td><td>1.0</td><td>1.0</td><td>1.0</td><td>1.0</td></tr><tr><td>2020/03/05 13:22:19</td><td>2</td><td>2.0</td><td>2.0</td><td>2.0</td><td>2.0</td><td>2.0</td><td>2.0</td></tr><tr><td>2020/03/05 16:47:59</td><td>aaa</td><td>2.0</td><td>2.0</td><td>2.0</td><td>2.0</td><td>2.0</td><td>2.0</td></tr><tr><td>2020/03/05 20:18:38</td><td>これもももてすと</td><td>1.0</td><td>2.0</td><td>3.0</td><td>4.0</td><td>5.0</td><td>3.0</td></tr><tr><td>2020/03/05 20:42:35</td><td>てすと</td><td>1.0</td><td>2.0</td><td>3.0</td><td>4.0</td><td>5.0</td><td>3.0</td></tr><tr><td>2020/03/05 12:23:49</td><td>Nyanyan2</td><td>3.314</td><td>3.568</td><td>3.127</td><td>3.245</td><td>2.769</td><td>3.229</td></tr><tr><td>2020/03/05 20:44:36</td><td>あれあれ</td><td>2.0</td><td>3.0</td><td>4.0</td><td>5.0</td><td>6.0</td><td>4.0</td></tr><tr><td>2020/03/05 22:23:41</td><td>mirrorテスト</td><td>2.0</td><td>3.0</td><td>4.0</td><td>5.0</td><td>6.0</td><td>4.0</td></tr><tr><td>2020/03/05 17:44:33</td><td>これもてすと</td><td>5.0</td><td>5.0</td><td>5.0</td><td>5.0</td><td>5.0</td><td>5.0</td></tr><tr><td>2020/03/05 19:17:07</td><td>てすとやでぇ</td><td>1.0</td><td>3.0</td><td>5.0</td><td>7.0</td><td>9.0</td><td>5.0</td></tr><tr><td>2020/03/05 12:56:00</td><td>test6</td><td>6.0</td><td>6.0</td><td>6.0</td><td>6.0</td><td>6.0</td><td>6.0</td></tr><tr><td>2020/03/05 13:04:25</td><td>test8</td><td>8.0</td><td>8.0</td><td>8.0</td><td>8.0</td><td>8.0</td><td>8.0</td></tr><tr><td>2020/03/05 12:14:50</td><td>Nyanyan</td><td>9.082</td><td>11.296</td><td>10.102</td><td>9.886</td><td>10.379</td><td>10.122</td></tr><tr><td>2020/03/05 12:21:42</td><td>Nyanyan3</td><td>12.751</td><td>13.76</td><td>11.554</td><td>14.615</td><td>12.467</td><td>12.993</td></tr><tr><td>2020/03/05 13:55:30</td><td>jadoihaiH</td><td>DNF</td><td>DNF</td><td>DNF</td><td>DNF</td><td>DNF</td><td>DNF</td></tr><tr><td>2020/03/05 19:55:47</td><td>jasoico</td><td>DNF</td><td>DNF</td><td>1.0</td><td>2.0</td><td>5.0</td><td>DNF</td></tr><tr><td>=======</td></tr><tr><td>2020/03/05 20:47:57</td><td>clock</td><td>5.0</td><td>6.0</td><td>7.0</td><td>8.0</td><td>9.0</td><td>7.0</td></tr><tr><td>>>>>>>> 847774b4e7a5b4648451ac8154cde7cba09b10fb</td></tr>
+											<!--<tbody id="ranking_yesterday"></tbody>-->
+										</table>
+								</section>
+							<!-- Section -->
+							<!--
+								<section>
+									<header class="major">
+										<h2>Ipsum sed dolor</h2>
+									</header>
+									<div class="posts">
+										<article>
+											<a href="#" class="image"><img src="../images/pic01.jpg" alt="" /></a>
+											<h3>Interdum aenean</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="../images/pic02.jpg" alt="" /></a>
+											<h3>Nulla amet dolore</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="../images/pic03.jpg" alt="" /></a>
+											<h3>Tempus ullamcorper</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="../images/pic04.jpg" alt="" /></a>
+											<h3>Sed etiam facilis</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="../images/pic05.jpg" alt="" /></a>
+											<h3>Feugiat lorem aenean</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="../images/pic06.jpg" alt="" /></a>
+											<h3>Amet varius aliquam</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul class="actions">
+												<li><a href="#" class="button">More</a></li>
+											</ul>
+										</article>
+									</div>
+								</section>
+							-->
 						</div>
 					</div>
 				
@@ -94,15 +204,15 @@
                                     </header>
                                     <div class="mini-posts">
                                         <article>
-                                            <a href="#" class="image"><img src="../images/pic07.jpg" alt="" /></a>
+                                            <a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
                                             <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
                                         </article>
                                         <article>
-                                            <a href="#" class="image"><img src="../images/pic08.jpg" alt="" /></a>
+                                            <a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
                                             <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
                                         </article>
                                         <article>
-                                            <a href="#" class="image"><img src="../images/pic09.jpg" alt="" /></a>
+                                            <a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
                                             <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
                                         </article>
                                     </div>
@@ -133,6 +243,7 @@
 
                         </div>
                     </div>
+
 			</div>
 
 		<!-- Scripts -->
@@ -141,6 +252,8 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
+            <script src="../assets/js/jquery.csv.js"></script>
+            <!--SCRIPT_REPLACE_HERE-->
 
 	</body>
 </html>
