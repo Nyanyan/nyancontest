@@ -67,8 +67,11 @@ elif event == 'Floppy':
 elif event == 'SuperFloppy':
     googleform = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdfngAyjbxqElCEQakGbSv8k17YMAv-mlyzS62dSh10MC79jA/formResponse"
     form = ["entry.1853627703", "entry.1755529497", "entry.307956320", "entry.869891293", "entry.2034438629", "entry.1023457257"]
+elif event == 'FloppyGhost':
+    googleform = "https://docs.google.com/forms/u/0/d/e/1FAIpQLScccJcQL8eOObFQVDHhOEh6YF7_Qj_sbmJjUPIHXXKMF0Nhjw/formResponse"
+    form = ["entry.1763240876", "entry.699565774", "entry.305741797", "entry.115360861", "entry.1967645681", "entry.776588168"]
 else:
-    googleform = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdfngAyjbxqElCEQakGbSv8k17YMAv-mlyzS62dSh10MC79jA/formResponse"
+    googleform = ""
     form = ["entry.", "entry.", "entry.", "entry.", "entry.", "entry."]
 html = html.replace('GOOGLEFORM_REPLACE_HERE', '"' + googleform + '"')
 html = html.replace('NAME_REPLACE_HERE', '"' + form[0] + '"')
