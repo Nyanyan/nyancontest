@@ -39,7 +39,7 @@ for i in range(len(events)):
                     break
         time.sleep(10)
     else:
-        command = ['python', 'scramble_' + events[i] + '.py']
+        command = ['python3', 'scramble_' + events[i] + '.py']
         for j in range(5):
             row.append(subprocess.check_output(command).decode())
             print(row[j+1])
