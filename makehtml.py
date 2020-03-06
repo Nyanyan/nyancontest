@@ -1,11 +1,12 @@
 import csv
 import sys
+import codecs
 
 args = sys.argv
 event = args[1]
 
 html = ''
-with open("competitionformat.html", mode='r', encoding='utf-8') as f:
+with codecs.open("competitionformat.html", 'r', 'utf-8', 'ignore') as f:
     html = f.read()
 #html = html.replace('SCRIPT_REPLACE_HERE', '            <script src="getdata.js"></script>\n            <script src="getdata_yesterday.js"></script>\n          <script src="getdate.js"></script>\n            <script src="getscramble.js"></script>')
 
@@ -14,13 +15,13 @@ html = html.replace('EVENT_REPLACE_HERE', event)
 html = html.replace('ICON_REPLACE_HERE', '../images/' + event + '.png')
 
 date = ''
-with open("date.txt", mode='r', encoding='utf-8') as f:
+with codecs.open("date.txt", 'r', 'utf-8', 'ignore') as f:
     date = f.read()
 html = html.replace('DATE_REPLACE_HERE', date)
 
 scramble = ''
 scramblearr = []
-with open("scramble.csv", mode='r', encoding='utf-8') as f:
+with codecs.open("scramble.csv", 'r', 'utf-8', 'ignore') as f:
     scramblearr = list(csv.reader(f))
 flag = False
 for i in range(len(scramblearr)):
@@ -34,7 +35,7 @@ html = html.replace('SCRAMBLE_REPLACE_HERE', scramble)
 
 ranking = ''
 rankingarr = []
-with open(event + "/data.csv", mode='r', encoding='utf-8') as f:
+with codecs.open(event + "/data.csv", 'r', 'utf-8', 'ignore') as f:
     rankingarr = list(csv.reader(f))
 for i in range(len(rankingarr)):
     ranking += '<tr>'
@@ -45,7 +46,7 @@ html = html.replace('RANKING_REPLACE_HERE', ranking)
 
 yranking = ''
 yrankingarr = []
-with open(event + "/data_yesterday.csv", mode='r', encoding='utf-8') as f:
+with codecs.open(event + "/data_yesterday.csv", 'r', 'utf-8', 'ignore') as f:
     yrankingarr = list(csv.reader(f))
 for i in range(len(yrankingarr)):
     yranking += '<tr>'
@@ -70,5 +71,5 @@ for i in range(1, len(form)):
 
 
 
-with open(event + "/index.html", mode='w', encoding='utf-8') as f:
+with codecs.open(event + "/index.html", 'w', 'utf-8', 'ignore') as f:
     f.write(html)
