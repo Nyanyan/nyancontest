@@ -23,7 +23,7 @@ with open('scramble.csv', mode='w') as f:
 wca = ['3x3', '2x2', '4x4', '5x5', '6x6', '7x7', '3BLD', '3OH', 'Clock', 'Megaminx', 'Pyraminx', 'Skewb', 'Square-1', '4BLD', '5BLD']
 events = ['Clock', 'Mirror3x3', 'Floppy', 'SuperFloppy', 'FloppyGhost']
 timeout = 10
-scrambleevent = [8, 0, 15, 15]
+scrambleevent = [8, 0, 15, 15, 15]
 
 for i in range(len(events)):
     #session = 8 #clock
