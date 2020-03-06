@@ -61,8 +61,8 @@ elif event == 'Mirror3x3':
     googleform = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfec5JC5vKDGeuY31i82-wS7h2bOz0a80K66ExTVK_AW-BU1w/formResponse"
     form = ["entry.124718628", "entry.595343204", "entry.772823004", "entry.967262556", "entry.1547065456", "entry.1566696308"]
 elif event == 'Floppy':
-    googleform = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfec5JC5vKDGeuY31i82-wS7h2bOz0a80K66ExTVK_AW-BU1w/formResponse"
-    form = ["entry.124718628", "entry.595343204", "entry.772823004", "entry.967262556", "entry.1547065456", "entry.1566696308"]
+    googleform = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfkW7bPcu3y2SMAJvAwWrnjh1Jcns1ioyAROAp6pgJqTu5VYw/formResponse"
+    form = ["entry.1109233137", "entry.31162809", "entry.514623634", "entry.733409026", "entry.260491665", "entry.706137037"]
 html = html.replace('GOOGLEFORM_REPLACE_HERE', '"' + googleform + '"')
 html = html.replace('NAME_REPLACE_HERE', '"' + form[0] + '"')
 for i in range(1, len(form)):
