@@ -73,6 +73,9 @@ elif event == 'FloppyGhost':
 elif event == 'Void':
     googleform = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdBqQWjQEvyQVozQiqUlZ9JtkxnicYEyFA9CZXE8VZMYmHNAA/formResponse"
     form = ["entry.1794443657", "entry.1331328678", "entry.657132955", "entry.1651365421", "entry.638295325", "entry.933075668"]
+elif event == 'Kilominx':
+    googleform = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSclB2rsUn14Pxoourpm7eBWDVNCCwDqxV4Z5y8C1KkhiTl2TQ/formResponse"
+    form = ["entry.278586755", "entry.1763082143", "entry.1827584236", "entry.949458588", "entry.284447102", "entry.1636857682"]
 else:
     googleform = ""
     form = ["entry.", "entry.", "entry.", "entry.", "entry.", "entry."]

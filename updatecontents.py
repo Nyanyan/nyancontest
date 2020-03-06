@@ -3,7 +3,7 @@ import codecs
 htmlpath = [['home.html', 'index.html'], ['how-to-scramble/how-to-scramble.html', 'how-to-scramble/index.html'], ['policy/policy.html', 'policy/index.html'], ['request/request.html', 'request/index.html']]
 replaceelements = [['menuformat.html', 'MENU_REPLACE_HERE']]
 
-events = ['Clock', 'Mirror3x3', 'Floppy', 'SuperFloppy', 'FloppyGhost', 'Void']
+events = ['Clock', 'Mirror3x3', 'Floppy', 'SuperFloppy', 'FloppyGhost', 'Void', 'Kilominx']
 for event in events:
     htmlpath.append([event + '/' + event + '.html', event + '/index.html'])
 
