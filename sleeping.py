@@ -12,8 +12,8 @@ with codecs.open('sleeping.html', 'r', 'utf-8', 'ignore') as f:
     html = f.read()
 for htmlpath in htmlpaths:
     if len(htmlpath) > 11:
-        html = html.replace('images', '../images')
-        html = html.replace('assets', '../assets')
+        html = html.replace('"images', '../images')
+        html = html.replace('"assets', '../assets')
     for replacepath in replaceelements:
         replaceelement = ''
         with codecs.open(replacepath[0], 'r', 'utf-8', 'ignore') as f:
