@@ -1,7 +1,7 @@
 import csv
 import codecs
 
-events = ['Clock', 'Mirror3x3', 'Floppy', 'SuperFloppy', 'FloppyGhost']
+events = ['Clock', 'Mirror3x3', 'Floppy', 'SuperFloppy', 'FloppyGhost', 'Void']
 
 for event in events:
     data = []
