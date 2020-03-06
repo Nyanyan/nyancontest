@@ -9,8 +9,7 @@
 		<title>NyanContest</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../assets/css/main.css" />
-		<meta http-equiv="Pragma" content="no-cache">
+		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
@@ -37,125 +36,16 @@
 								<section id="banner">
 									<div class="content">
 										<header>
-											<h1>Clock</h1>
-											<p>NyanContest Clock競技</p>
+											<h1>NyanContest</h1>
+											<p>マイナー競技と非公式競技に特化したオンラインコンテスト</p>
 										</header>
-										<!--<h2 id="date"></h2>-->
-										<h2>2020/3/6</h2>
-										<p>タイムの反映には1分-2分ほどかかります。タイム入力後2分ほどしましたらページをリロードしてください。その際フォームの再送信をしないようお気をつけください。それでも結果が反映されない場合はスーパーリロードをしてください。どうしても結果が反映されないときはTwitterなどでお知らせください。</p>
-										<ul class="actions">
-											<li><a href="#competition" class="button big">競技開始</a></li>
-										</ul>
+										<p>毎日開催するスピードキューブのオンラインコンテストです。ぜひご参加ください。</p>
+										<p>現在コンテストは開催されていません。コンテスト開催時間は毎日0:15から23:45です。</p>
 									</div>
 									<span class="image object">
-										<img src=../images/Clock.png alt="" />
+										<img src="images/top.png" alt="" />
 									</span>
 								</section>
-						
-							<!-- Section -->
-								<section>
-									<article id="competition">
-                                        <h2>スクランブル</h2>
-                                        <table>
-                                            <tr><td>Clock</td></tr><tr><td>UR3- DR1- DL1+ UL4+ U1- R4+ D3+ L1- ALL3+ y2 U5+ R5+ D5+ L5- ALL0+ UR</td></tr><tr><td>UR2- DR4+ DL3- UL2+ U6+ R5- D5+ L3+ ALL5+ y2 U4- R3- D6+ L2+ ALL3- UR DL</td></tr><tr><td>UR0+ DR6+ DL2+ UL4- U2- R5- D0+ L6+ ALL0+ y2 U4- R2- D4- L2- ALL4- UL</td></tr><tr><td>UR5+ DR3+ DL1- UL5- U3+ R5+ D3+ L0+ ALL1+ y2 U6+ R4- D4- L2+ ALL6+ UR UL</td></tr><tr><td>UR2- DR5+ DL3+ UL1- U5- R5- D0+ L5+ ALL3- y2 U6+ R4- D2- L5- ALL1+ UR DR UL</td></tr>
-                                        </table>
-                                        <!---
-										<table>
-											<tbody id="scramble"></tbody>
-                                        </table>
-                                        -->
-										<h2>タイム入力</h2>
-										<p>+2の場合は+2をした後の最終的なタイムを、DNFの場合はDNFと書いてください。</p>
-										<div id="formWrapper">
-											<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdNs5H8dzfoZe0IWXMx4AujhDipY2MYe6LoJtdKusxlNN1QWA/formResponse" method="post" name="myForm" target="dummyIframe">
-												<label for="name">名前</label>
-												<input id="name" type="text" name="entry.1460875154" placeholder="Nyanyan" required>
-												<label for="name">1st</label>
-												<input id="1st" type="text" name="entry.39328532" placeholder="1:23.456" required>
-												<label for="name">2nd</label>
-												<input id="2nd" type="text" name="entry.975282763" placeholder="1:23.456" required>
-												<label for="name">3rd</label>
-												<input id="3rd" type="text" name="entry.673200780" placeholder="1:23.456" required>
-												<label for="name">4th</label>
-												<input id="4th" type="text" name="entry.1826089930" placeholder="1:23.456" required>
-												<label for="name">5th</label>
-												<input id="5th" type="text" name="entry.75959801" placeholder="1:23.456" required>
-												<input class="btn btn-success" type="button" value="送信" onclick="submitForm()"/>
-											</form>
-											<iframe name="dummyIframe" style="display:none;"></iframe>
-										</div>
-										<div id="thxMessage" style="display:none;"><p>送信が完了しました。結果反映まで数分お待ち下さい。</p></div>
-										<script src="../submit.js"></script>
-										<!--<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdNs5H8dzfoZe0IWXMx4AujhDipY2MYe6LoJtdKusxlNN1QWA/viewform?embedded=true" width="500" height="1300" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>-->
-										<h2>ランキング</h2>
-										<table>
-                                            <!--<tbody id="ranking"></tbody>-->
-                                            
-										</table>
-										<h2>昨日のランキング</h2>
-										<table>
-                                            <tr><td>2020/03/06 0:04:47</td><td>せかんどてすと</td><td>0.0</td><td>1.0</td><td>2.0</td><td>3.0</td><td>4.0</td><td>2.0</td></tr><tr><td>2020/03/06 0:06:46</td><td>さーどてすと</td><td>DNF</td><td>1.0</td><td>2.0</td><td>5.0</td><td>7.0</td><td>4.667</td></tr><tr><td>2020/03/06 10:18:48</td><td>あさてすと</td><td>DNF</td><td>1.234</td><td>5.678</td><td>9.012</td><td>3.456</td><td>6.049</td></tr>
-											<!--<tbody id="ranking_yesterday"></tbody>-->
-										</table>
-								</section>
-							<!-- Section -->
-							<!--
-								<section>
-									<header class="major">
-										<h2>Ipsum sed dolor</h2>
-									</header>
-									<div class="posts">
-										<article>
-											<a href="#" class="image"><img src="../images/pic01.jpg" alt="" /></a>
-											<h3>Interdum aenean</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="../images/pic02.jpg" alt="" /></a>
-											<h3>Nulla amet dolore</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="../images/pic03.jpg" alt="" /></a>
-											<h3>Tempus ullamcorper</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="../images/pic04.jpg" alt="" /></a>
-											<h3>Sed etiam facilis</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="../images/pic05.jpg" alt="" /></a>
-											<h3>Feugiat lorem aenean</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="../images/pic06.jpg" alt="" /></a>
-											<h3>Amet varius aliquam</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-									</div>
-								</section>
-							-->
 						</div>
 					</div>
 				
@@ -178,6 +68,7 @@
                                 <ul>
                                     <li><a href="https://nyanyan.github.io/nyancontest">ホーム</a></li>
                                     <li><a href="https://nyanyan.github.io/nyancontest/policy">はじめにお読みください</a></li>
+                                    <li><a href="https://nyanyan.github.io/nyancontest/how-to-scramble">スクランブル方法</a></li>
                                     <li>
                                         <span class="opener">競技に参加する</span>
                                         <ul>
@@ -190,7 +81,7 @@
                                         </ul>
                                     </li>
                                     <li><a href="https://nyanyan.github.io">制作者のWebページ</a></li>
-                                    <li><a href="https://nyanyan.github.io/nyancontest/request">種目の追加</a></li>
+                                    <li><a href="https://nyanyan.github.io/nyancontest/request">種目の追加申請</a></li>
                                 </ul>
                             </nav>
 
@@ -241,17 +132,14 @@
 
                         </div>
                     </div>
-
 			</div>
 
 		<!-- Scripts -->
-			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../assets/js/browser.min.js"></script>
-			<script src="../assets/js/breakpoints.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
-            <script src="../assets/js/jquery.csv.js"></script>
-            <!--SCRIPT_REPLACE_HERE-->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>

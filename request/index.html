@@ -9,7 +9,7 @@
 		<title>NyanContest</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
@@ -36,125 +36,139 @@
 								<section id="banner">
 									<div class="content">
 										<header>
-											<h1>NyanContest</h1>
-											<p>マイナー競技と非公式競技に特化したオンラインコンテスト</p>
+											<h1>種目の追加申請</h1>
+											<p>本コンテストサイトに新たな種目を追加したい方はこちらをご覧ください。</p>
 										</header>
-										<p>毎日開催するスピードキューブのオンラインコンテストです。ぜひご参加ください。</p>
-										<ul class="actions">
-											<li><a href="#attend" class="button big">いますぐ参加</a></li>
-										</ul>
 									</div>
 									<span class="image object">
-										<img src="images/top.png" alt="" />
+										<img src="../images/events.png" alt="" />
 									</span>
 								</section>
-
-							<!-- Section -->
 								<section>
-									<article id="attend">
-										<header class="major">
-											<h2>競技に参加する</h2>
-										</header>
-										<div class="features">
-											<div style="margin:0 auto;">
-												<span><img src="images/Clock.png" alt="" width="200"/></span>
-												<a href="https://nyanyan.github.io/nyancontest/Clock/" class="button big">Clock</a>
-											</div>
-											<div style="margin:0 auto;">
-												<span><img src="images/Mirror3x3.png" alt="" width="200"/></span>
-												<a href="https://nyanyan.github.io/nyancontest/Mirror3x3/" class="button big">Mirror3x3</a>
-											</div>
-											<div style="margin:0 auto;">
-												<span><img src="images/Floppy.png" alt="" width="200"/></span>
-												<a href="https://nyanyan.github.io/nyancontest/Floppy/" class="button big">Floppy</a>
-											</div>
-											<div style="margin:0 auto;">
-												<span><img src="images/SuperFloppy.png" alt="" width="200"/></span>
-												<a href="https://nyanyan.github.io/nyancontest/SuperFloppy/" class="button big">SuperFloppy</a>
-											</div>
-											<div style="margin:0 auto;">
-												<span><img src="images/FloppyGhost.png" alt="" width="200"/></span>
-												<a href="https://nyanyan.github.io/nyancontest/FloppyGhost/" class="button big">FloppyGhost</a>
-                                            </div>
-                                            <div style="margin:0 auto;">
-												<span><img src="images/Void.png" alt="" width="200"/></span>
-												<a href="https://nyanyan.github.io/nyancontest/Void/" class="button big">Void</a>
-											</div>
-										</div>
-									</article>
+									<header class="major"><h2>はじめに</h2></header>
+									<p>まず、<a href="https://nyanyan.github.io/nyancontest/policy">本コンテストの運営方針</a>をご覧いただき、追加を希望する種目が運営方針に合致していることを確かめてください。</p>
+									<header class="major"><h2>申請方法</h2></header>
+									<h3>申請に必要なもの</h3>
+									<ul>
+										<li>申請する競技の名前(英語)</li>
+										<li>申請する競技に使うパズルの写真(アイコン作成に使います)</li>
+										<li>申請する競技に使うパズルのスクランブル方法またはスクランブル生成プログラム(プログラムの仕様については後述)</li>
+									</ul>
+									<h3>スクランブル生成プログラムの仕様</h3>
+									<p>
+										スクランブル生成プログラムを作ってくださる場合は以下の仕様にできる限りしたがって制作してください。
+									</p>
+									<h4>実行環境</h4>
+									<ul>
+										<li>Python 3.7.0</li>
+										<li>Raspbian 4.19</li>
+										<li>Raspberry Pi 3 B 1GB RAM</li>
+									</ul>
+									<h4>実行コマンドと出力形式</h4>
+									<p>
+										実行コマンドは<br>
+										python3 scramble_[競技名].py<br>
+										です。
+										標準出力に1つのスクランブルを改行なしで出力してください。
+									</p>
+									<h3>申請方法</h3>
+									<p>ページ上部のSNSからご連絡ください。その際、Twitterですと素早く対応できます。</p>
 								</section>
-							
-							<!-- Section -->
-							<!--
-								<section>
-									<header class="major">
-										<h2>Ipsum sed dolor</h2>
-									</header>
-									<div class="posts">
-										<article>
-											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-											<h3>Interdum aenean</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-											<h3>Nulla amet dolore</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-											<h3>Tempus ullamcorper</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3>Sed etiam facilis</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3>Feugiat lorem aenean</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-											<h3>Amet varius aliquam</h3>
-											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											<ul class="actions">
-												<li><a href="#" class="button">More</a></li>
-											</ul>
-										</article>
-									</div>
-								</section>
-							-->
 						</div>
 					</div>
 				
 				<!-- Sidebar -->
-				MENU_REPLACE_HERE
+				                    <div id="sidebar">
+                        <div class="inner">
+
+                            <!-- Search -->
+                                <section id="search" class="alt">
+                                    <form method="post" action="#">
+                                        <input type="text" name="query" id="query" placeholder="Search" />
+                                    </form>
+                                </section>
+
+                            <!-- Menu -->
+                            <nav id="menu">
+                                <header class="major">
+                                    <h2>Menu</h2>
+                                </header>
+                                <ul>
+                                    <li><a href="https://nyanyan.github.io/nyancontest">ホーム</a></li>
+                                    <li><a href="https://nyanyan.github.io/nyancontest/policy">はじめにお読みください</a></li>
+                                    <li><a href="https://nyanyan.github.io/nyancontest/how-to-scramble">スクランブル方法</a></li>
+                                    <li>
+                                        <span class="opener">競技に参加する</span>
+                                        <ul>
+                                            <li><a href="https://nyanyan.github.io/nyancontest/Clock">Clock</a></li>
+                                            <li><a href="https://nyanyan.github.io/nyancontest/Mirror3x3">Mirror3x3</a></li>
+                                            <li><a href="https://nyanyan.github.io/nyancontest/Floppy">Floppy</a></li>
+                                            <li><a href="https://nyanyan.github.io/nyancontest/SuperFloppy">SuperFloppy</a></li>
+                                            <li><a href="https://nyanyan.github.io/nyancontest/FloppyGhost">FloppyGhost</a></li>
+                                            <li><a href="https://nyanyan.github.io/nyancontest/Void">Void</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="https://nyanyan.github.io">制作者のWebページ</a></li>
+                                    <li><a href="https://nyanyan.github.io/nyancontest/request">種目の追加申請</a></li>
+                                </ul>
+                            </nav>
+
+                            <!-- Section -->
+                            <!--
+                                <section>
+                                    <header class="major">
+                                        <h2>Ante interdum</h2>
+                                    </header>
+                                    <div class="mini-posts">
+                                        <article>
+                                            <a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+                                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                                        </article>
+                                        <article>
+                                            <a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+                                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                                        </article>
+                                        <article>
+                                            <a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+                                            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
+                                        </article>
+                                    </div>
+                                    <ul class="actions">
+                                        <li><a href="#" class="button">More</a></li>
+                                    </ul>
+                                </section>
+                            -->
+                            <!-- Section -->
+                            <!--
+                                <section>
+                                    <header class="major">
+                                        <h2>Get in touch</h2>
+                                    </header>
+                                    <p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+                                    <ul class="contact">
+                                        <li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
+                                        <li class="icon solid fa-phone">(000) 000-0000</li>
+                                        <li class="icon solid fa-home">1234 Somewhere Road #8254<br />
+                                        Nashville, TN 00000-0000</li>
+                                    </ul>
+                                </section>
+                            -->
+                            <!-- Footer -->
+                                <footer id="footer">
+                                    <p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                                </footer>
+
+                        </div>
+                    </div>
+
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>
