@@ -1,6 +1,6 @@
 import csv
 
-events = ['Clock', 'Mirror3x3']
+events = ['Clock', 'Mirror3x3', 'Floppy']
 
 for event in events:
     data = []
