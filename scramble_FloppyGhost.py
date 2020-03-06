@@ -10,8 +10,7 @@ def stay_in_range(start, end, i):
 
 def rand_ex(start, end, ex):
     res = random.randint(start, end)
-    tmp = random.randint(0, 2)
-    shift = tmp if tmp > 0 else -1
+    shift = [-1, 1, 2][random.randrange(3)]
     if res in ex:
         res += shift
         res = stay_in_range(start, end, res)
