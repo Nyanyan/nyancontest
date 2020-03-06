@@ -1,4 +1,4 @@
-#!bin/sh
+#!/bin/sh
 
 python3 sleeping.py
 git add .
