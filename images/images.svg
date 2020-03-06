@@ -66,6 +66,33 @@
      inkscape:label="レイヤー 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="opacity:1;fill:#fdfdfd;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4526-6-2"
+       width="35"
+       height="35"
+       x="114.69717"
+       y="38.090775"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <rect
+       style="opacity:1;fill:#fdfdfd;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4526-6-8"
+       width="35"
+       height="35"
+       x="76.680862"
+       y="36.917732"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
+    <rect
+       style="opacity:1;fill:#fdfdfd;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4526-6"
+       width="35"
+       height="35"
+       x="39.952377"
+       y="36.839287"
+       inkscape:export-xdpi="500"
+       inkscape:export-ydpi="500" />
     <circle
        style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path815"
@@ -184,8 +211,8 @@
        id="rect4526-9"
        width="28"
        height="10"
-       x="117.15774"
-       y="57.961311"
+       x="118.19717"
+       y="50.590775"
        inkscape:export-xdpi="500"
        inkscape:export-ydpi="500" />
     <rect
@@ -193,8 +220,8 @@
        id="rect4568"
        width="9.2752981"
        height="10"
-       x="117.15774"
-       y="57.961311"
+       x="118.19717"
+       y="50.590775"
        inkscape:export-xdpi="500"
        inkscape:export-ydpi="500" />
     <rect
@@ -202,8 +229,8 @@
        id="rect4568-2"
        width="9.2752981"
        height="10"
-       x="135.88245"
-       y="57.961311"
+       x="136.92188"
+       y="50.590775"
        inkscape:export-xdpi="500"
        inkscape:export-ydpi="500" />
   </g>
