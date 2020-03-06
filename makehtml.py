@@ -10,6 +10,12 @@ with codecs.open("competitionformat.html", 'r', 'utf-8', 'ignore') as f:
     html = f.read()
 #html = html.replace('SCRIPT_REPLACE_HERE', '            <script src="getdata.js"></script>\n            <script src="getdata_yesterday.js"></script>\n          <script src="getdate.js"></script>\n            <script src="getscramble.js"></script>')
 
+menu = ''
+with codecs.open("menuformat.html", 'r', 'utf-8', 'ignore') as f:
+    menu = f.read()
+
+html = html.replace('MENU_REPLACE_HERE', menu)
+
 html = html.replace('EVENT_REPLACE_HERE', event)
 
 html = html.replace('ICON_REPLACE_HERE', '../images/' + event + '.png')
