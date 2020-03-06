@@ -1,19 +1,24 @@
 import random
-import copy
+
+def rand_ex(start, end, ex):
+    res = random.randint(start, end)
+    shift = random.randint(0, 1) * randint(2, 3) - 1
+    while res in ex:
+        res += shift
+        if res > end:
+            res = start
+        elif res < start:
+            res = end
+    return res
+
 l = 20
 scramble = ''
-turn = ['U', 'UL', 'UR', 'DL', 'DR']
-tmp = random.randint(0, 4)
-scramble += turn[tmp] + '2 '
-select = copy.deepcopy(turn)
-del select[tmp]
-for i in range(l-1):
-    tmp = random.randint(0, 3)
-    add = select[tmp]
-    scramble += add + '2 '
-    select = copy.deepcopy(turn)
-    for j in range(4):
-        if add == select[j]:
-            del select[j]
-            break
+turn = ['U', 'UL', 'DR', 'DL', 'UR']
+ex = []
+for i in range(l):
+    index = rand_ex(0, 3, ex)
+    scramble += turn[index] + '2 '
+    ex.append(index)
+    if set(ex) != set([0, 2]) and set(ex) != set([0, 3]) and set(ex) != set([1, 3]) and set(ex) != set([1, 4]) and set(ex) != set([2, 4]):
+        ex = [index]
 print(scramble, end='')
