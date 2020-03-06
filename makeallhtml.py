@@ -1,6 +1,6 @@
 import subprocess
 
-events = ['Clock', 'Mirror3x3']
+events = ['Clock', 'Mirror3x3', 'Floppy']
 
 for arg in events:
     print(arg)
