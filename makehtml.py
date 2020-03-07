@@ -82,6 +82,9 @@ elif event == 'Void':
 elif event == 'Kilominx':
     googleform = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSclB2rsUn14Pxoourpm7eBWDVNCCwDqxV4Z5y8C1KkhiTl2TQ/formResponse"
     form = ["entry.278586755", "entry.1763082143", "entry.1827584236", "entry.949458588", "entry.284447102", "entry.1636857682"]
+elif event == 'Redi':
+    googleform = "https://docs.google.com/forms/u/0/d/e/1FAIpQLSehDFzt91aMwTPWVozLIlqPC7xRrfoNLcun_Z9s-jRlA4bCow/formResponse"
+    form = ["entry.1740381961", "entry.1778933736", "entry.1688742736", "entry.1076503294", "entry.1511718114", "entry.729104288"]
 else:
     googleform = ""
     form = ["entry.", "entry.", "entry.", "entry.", "entry.", "entry."]

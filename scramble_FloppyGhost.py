@@ -2,9 +2,11 @@ import random
 
 def stay_in_range(start, end, i):
     if i > end:
-        i = start
+        a = i - end
+        i = start + a - 1
     elif i < start:
-        i = end
+        a = start - i
+        i = end - a + 1
     return i
 
 
@@ -12,9 +14,11 @@ def rand_ex(start, end, ex):
     res = random.randint(start, end)
     shift = [-1, 1, 2][random.randrange(3)]
     if res in ex:
+        formerres = res
         res += shift
         res = stay_in_range(start, end, res)
     if res in ex:
+        formerres = res
         res += 1
         res = stay_in_range(start, end, res)
     return res
@@ -25,7 +29,7 @@ turn = ['U', 'UR', 'DR', 'DL', 'UL']
 ex = []
 exception = [set([0, 2]), set([0, 3]), set([1, 3]), set([1, 4]), set([2, 4])]
 for i in range(l):
-    index = rand_ex(0, 3, ex)
+    index = rand_ex(0, 4, ex)
     scramble += turn[index] + '2 '
     ex.append(index)
     if not set(ex) in exception:
