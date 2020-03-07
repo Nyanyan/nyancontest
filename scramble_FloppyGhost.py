@@ -21,7 +21,7 @@ def rand_ex(start, end, ex):
 
 l = 20
 scramble = ''
-turn = ['U', 'UL', 'DR', 'DL', 'UR']
+turn = ['U', 'UR', 'DR', 'DL', 'UL']
 ex = []
 exception = [set([0, 2]), set([0, 3]), set([1, 3]), set([1, 4]), set([2, 4])]
 for i in range(l):
