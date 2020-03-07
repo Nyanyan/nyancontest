@@ -3,7 +3,7 @@ import codecs
 htmlpaths = ['index.html']
 replaceelements = [['menuformat.html', 'MENU_REPLACE_HERE']]
 
-events = ['Clock', 'Mirror3x3', 'Floppy', 'SuperFloppy', 'FloppyGhost', 'Void', 'Kilominx']
+events = ['Clock', 'Mirror3x3', 'Floppy', 'SuperFloppy', 'FloppyGhost', 'Void', 'Kilominx', 'Redi']
 for event in events:
     htmlpaths.append(event + '/index.html')
 
