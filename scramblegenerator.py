@@ -14,6 +14,7 @@ def generatescramble(i):
     response.close()
     #scramble = subprocess.check_output('curl "http://localhost:2014/scramble/.txt?e=' + string[session] + '"', shell=False).decode('utf8', 'ignore').rstrip(os.linesep)
     print(scramble)
+    time.sleep(1)
     return scramble
 
 with open('scramble.csv', mode='w') as f:
@@ -35,7 +36,7 @@ for i in range(len(events)):
                 if time.time() - start > timeout:
                     row = [events[i]]
                     print('retry')
-                    time.sleep(10)
+                    #time.sleep(10)
                     break
         time.sleep(10)
     else:
