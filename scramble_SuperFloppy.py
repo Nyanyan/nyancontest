@@ -1,14 +1,14 @@
 import random
 
 def rand_ex(start, end, ex):
-    res = random.randint(start, end)
-    shift = random.randint(0, 1) * 2 - 1
-    if res in ex:
-        res += shift
-        if res > end:
-            res = start
-        elif res < start:
-            res = end
+    arr = list(range(start, end + 1))
+    i = 0
+    while i < len(arr):
+        if arr[i] in ex:
+            del arr[i]
+        else:
+            i += 1
+    res = arr[random.randrange(len(arr))]
     return res
 
 l = 20

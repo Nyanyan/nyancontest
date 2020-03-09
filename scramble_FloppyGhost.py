@@ -1,12 +1,9 @@
 import random
 
 def stay_in_range(start, end, i):
-    if i > end:
-        a = i - end
-        i = start + a - 1
-    elif i < start:
-        a = start - i
-        i = end - a + 1
+    i -= start
+    i %= end - start + 1
+    i += start
     return i
 
 
@@ -16,8 +13,8 @@ def rand_ex(start, end, ex):
     while i < len(arr):
         if arr[i] in ex:
             del arr[i]
-            i -= 1
-        i += 1
+        else:
+            i += 1
     res = arr[random.randrange(len(arr))]
     return res
 
