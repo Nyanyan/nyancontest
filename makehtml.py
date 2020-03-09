@@ -44,7 +44,7 @@ rankingarr = []
 with codecs.open(event + "/data.csv", 'r', 'utf-8', 'ignore') as f:
     rankingarr = list(csv.reader(f))
 for i in range(len(rankingarr)):
-    ranking += '<tr>'
+    ranking += '<tr><td>名前</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td><td>5th</td><td>平均</td></tr><tr>'
     for j in range(len(rankingarr[i])):
         ranking += '<td>' + str(rankingarr[i][j]) + '</td>'
     ranking += '</tr>'
@@ -55,7 +55,7 @@ yrankingarr = []
 with codecs.open(event + "/data_yesterday.csv", 'r', 'utf-8', 'ignore') as f:
     yrankingarr = list(csv.reader(f))
 for i in range(len(yrankingarr)):
-    yranking += '<tr>'
+    yranking += '<tr><td>名前</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td><td>5th</td><td>平均</td></tr><tr>'
     for j in range(len(yrankingarr[i])):
         yranking += '<td>' + str(yrankingarr[i][j]) + '</td>'
     yranking += '</tr>'
