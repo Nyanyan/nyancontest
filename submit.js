@@ -6,7 +6,6 @@ function submitForm(){
         document.myForm.submit();
         document.getElementById('formWrapper').style.display = 'none';
         document.getElementById('thxMessage').style.display = 'block';
-        document.getElementById('tweetbutton').style.display = 'block';
         return true;
     }
 }
