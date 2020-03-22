@@ -43,15 +43,19 @@ print(personlist)
 html = ''
 with open('personalpages.html', mode='r', encoding='utf-8') as f:
     html = f.read()
+menu = ''
+with codecs.open("menuformat.html", 'r', 'utf-8', 'ignore') as f:
+    menu = f.read()
 for person in personlist:
     html_person = copy.deepcopy(html)
     html_person = html_person.replace('NAME_REPLACE_HERE', person)
+    html_person = html_person.replace('MENU_REPLACE_HERE', menu)
     for event in events:
         try:
             with open('personaldata/' + person + '/' + event + '.html', mode='x', encoding='utf-8') as f:
                 f.write('<tr><td>順位</td><td>日時</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td><td>5th</td><td>平均</td></tr>')
-        except FileExistsError:
-            continue
+        except:
+            pass
         data = ''
         with open('personaldata/' + person + '/' + event + '.html', mode='r', encoding='utf-8') as f:
             data = f.read()
