@@ -2,6 +2,7 @@ import csv
 import sys
 import codecs
 import os
+import copy
 
 #make personal data page
 
@@ -43,8 +44,17 @@ html = ''
 with open('personalpages.html', mode='r', encoding='utf-8') as f:
     html = f.read()
 for person in personlist:
-    try:
-        with open('personaldata/' + person + '/index.html', mode='x', encoding='utf-8') as f:
-            f.write(html)
-    except FileExistsError:
-        continue
+    html_person = copy.deepcopy(html)
+    html_person = html_person.replace('NAME_REPLACE_HERE', person)
+    for event in events:
+        try:
+            with open('personaldata/' + person + '/' + event + '.html', mode='x', encoding='utf-8') as f:
+                f.write('<tr><td>順位</td><td>日時</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td><td>5th</td><td>平均</td></tr>')
+        except FileExistsError:
+            continue
+        data = ''
+        with open('personaldata/' + person + '/' + event + '.html', mode='r', encoding='utf-8') as f:
+            data = f.read()
+        html_person = html_person.replace(event + '_REPLACE_HERE', data)
+    with open('personaldata/' + person + '/index.html', mode='w', encoding='utf-8') as f:
+        f.write(html_person)
