@@ -1,6 +1,6 @@
 import codecs
 
-htmlpath = [['home.html', 'index.html'], ['how-to-scramble/how-to-scramble.html', 'how-to-scramble/index.html'], ['policy/policy.html', 'policy/index.html'], ['request/request.html', 'request/index.html']]
+htmlpath = [['home.html', 'index.html'], ['how-to-scramble/how-to-scramble.html', 'how-to-scramble/index.html'], ['policy/policy.html', 'policy/index.html'], ['request/request.html', 'request/index.html'], ['personaldata/personaldata.html', 'personaldata/index.html']]
 replaceelements = [['menuformat.html', 'MENU_REPLACE_HERE']]
 
 for path in htmlpath:

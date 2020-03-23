@@ -62,3 +62,13 @@ for person in personlist:
         html_person = html_person.replace(event + '_REPLACE_HERE', data)
     with open('personaldata/' + person + '/index.html', mode='w', encoding='utf-8') as f:
         f.write(html_person)
+
+personhtml = ''
+for person in personlist:
+    personhtml += '<a href=https://nyanyan.github.io/nyancontest/personaldata/' + person + '>' + person + '</a>\n\n'
+html_personaltop = ''
+with open('personaldata/index.html', mode='r', encoding='utf-8') as f:
+    html_personaltop = f.read()
+html_personaltop = html_personaltop.replace('PERSONALPAGE_REPLACE_HERE', personhtml)
+with open('personaldata/index.html', mode='w', encoding='utf-8') as f:
+    f.write(html_personaltop)
