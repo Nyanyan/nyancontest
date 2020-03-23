@@ -65,7 +65,7 @@ for person in personlist:
 
 personhtml = ''
 for person in personlist:
-    personhtml += '<a href=https://nyanyan.github.io/nyancontest/personaldata/' + person + '>' + person + '</a>\n\n'
+    personhtml += '<a href=https://nyanyan.github.io/nyancontest/personaldata/' + person + '>' + person + '</a><br>'
 html_personaltop = ''
 with open('personaldata/index.html', mode='r', encoding='utf-8') as f:
     html_personaltop = f.read()
