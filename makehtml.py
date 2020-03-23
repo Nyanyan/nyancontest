@@ -54,7 +54,8 @@ for i in range(len(rankingarr)):
     for j in range(len(rankingarr[i])):
         if j == 1:
             ranking += '<td><a href=https://nyanyan.github.io/nyancontest/personaldata/' + str(rankingarr[i][j]) + '>' + str(rankingarr[i][j]) + '</a></td>'
-        ranking += '<td>' + str(rankingarr[i][j]) + '</td>'
+        else:
+            ranking += '<td>' + str(rankingarr[i][j]) + '</td>'
     ranking += '</tr>'
 html = html.replace('RANKING_REPLACE_HERE', ranking)
 
