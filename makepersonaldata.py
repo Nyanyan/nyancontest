@@ -55,7 +55,7 @@ personhtml = ''
 for person in personlist:
     personhtml += '<a href=https://nyanyan.github.io/nyancontest/personaldata/' + person + '>' + person + '</a><br>'
 html_personaltop = ''
-with open('personaldata/index.html', mode='r', encoding='utf-8') as f:
+with open('personaldata/personaldata.html', mode='r', encoding='utf-8') as f:
     html_personaltop = f.read()
 html_personaltop = html_personaltop.replace('PERSONALPAGE_REPLACE_HERE', personhtml)
 with open('personaldata/index.html', mode='w', encoding='utf-8') as f:
