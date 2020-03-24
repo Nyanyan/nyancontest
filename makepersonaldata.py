@@ -6,7 +6,7 @@ import copy
 
 #make personal data page
 
-events = ['Clock', 'Mirror3x3', 'Floppy', 'SuperFloppy', 'FloppyGhost', 'Void', 'Kilominx', 'Redi']
+events = ['Clock', 'Mirror3x3', 'SuperFloppy', 'Floppy', 'FloppyGhost', 'Void', 'Kilominx', 'Redi']
 
 for event in events:
     rankingarr = []
@@ -39,18 +39,11 @@ with open('personalpages.html', mode='r', encoding='utf-8') as f:
 menu = ''
 with codecs.open("menuformat.html", 'r', 'utf-8', 'ignore') as f:
     menu = f.read()
+html = html.replace('MENU_REPLACE_HERE', menu)
 for person in personlist:
     html_person = copy.deepcopy(html)
     html_person = html_person.replace('NAME_REPLACE_HERE', person)
-    html_person = html_person.replace('MENU_REPLACE_HERE', menu)
     for event in events:
-        '''
-        try:
-            with open('personaldata/' + person + '/' + event + '.html', mode='x', encoding='utf-8') as f:
-                f.write('<tr><td>順位</td><td>日時</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td><td>5th</td><td>平均</td></tr>')
-        except:
-            pass
-        '''
         data = ''
         with open('personaldata/' + person + '/' + event + '.html', mode='r', encoding='utf-8') as f:
             data = f.read()

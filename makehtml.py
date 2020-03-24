@@ -59,14 +59,22 @@ for i in range(len(rankingarr)):
     ranking += '</tr>'
 html = html.replace('RANKING_REPLACE_HERE', ranking)
 
-yranking = ''
+yranking = '<tr><td>順位</td><td>日時</td><td>名前</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td><td>5th</td><td>平均</td></tr>'
 yrankingarr = []
 with codecs.open(event + "/data_yesterday.csv", 'r', 'utf-8', 'ignore') as f:
     yrankingarr = list(csv.reader(f))
+rank = 1
+tmp = '0'
 for i in range(len(yrankingarr)):
-    yranking += '<tr><td>日時</td><td>名前</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td><td>5th</td><td>平均</td></tr><tr>'
+    if tmp != yrankingarr[i][7]:
+        rank = i + 1
+        tmp = yrankingarr[i][7]
+    yranking += '<tr><td>' + str(rank) + '</td>'
     for j in range(len(yrankingarr[i])):
-        yranking += '<td>' + str(yrankingarr[i][j]) + '</td>'
+        if j == 1:
+            yranking += '<td><a href=https://nyanyan.github.io/nyancontest/personaldata/' + str(yrankingarr[i][j]) + '>' + str(yrankingarr[i][j]) + '</a></td>'
+        else:
+            yranking += '<td>' + str(yrankingarr[i][j]) + '</td>'
     yranking += '</tr>'
 html = html.replace('RANKINGYESTERDAY_REPLACE_HERE', yranking)
 
