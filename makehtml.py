@@ -66,7 +66,7 @@ with codecs.open(event + "/data_yesterday.csv", 'r', 'utf-8', 'ignore') as f:
 rank = 1
 tmp = '0'
 for i in range(len(yrankingarr)):
-    if tmp != rankingarr[i][7]:
+    if tmp != yrankingarr[i][7]:
         rank = i + 1
         tmp = yrankingarr[i][7]
     yranking += '<tr><td>' + str(rank) + '</td>'
