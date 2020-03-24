@@ -25,15 +25,8 @@ for event in events:
                 continue
             ranking_person += '<td>' + str(rankingarr[i][j]) + '</td>'
         ranking_person += '</tr>'
-        os.makedirs('personaldata/' + rankingarr[i][1] + '/', exist_ok=True)
-        try:
-            with open('personaldata/' + rankingarr[i][1] + '/' + event + '.html', mode='x', encoding='utf-8') as f:
-                f.write('<tr><td>順位</td><td>日時</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td><td>5th</td><td>平均</td></tr>' + ranking_person)
-            with open('personaldata/list.txt', mode='a', encoding='utf-8') as f:
-                f.write(rankingarr[i][1] + '\n')
-        except FileExistsError:
-            with open('personaldata/' + rankingarr[i][1] + '/' + event + '.html', mode='a', encoding='utf-8') as f:
-                f.write(ranking_person)
+        with open('personaldata/' + rankingarr[i][1] + '/' + event + '.html', mode='a', encoding='utf-8') as f:
+            f.write(ranking_person)
 
 personlist = []
 with open('personaldata/list.txt', mode='r', encoding='utf-8') as f:
