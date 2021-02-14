@@ -10,7 +10,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
-		<meta http-equiv="Pragma" content="no-cache">
 	</head>
 	<body class="is-preload">
 
@@ -37,75 +36,15 @@
 								<section id="banner">
 									<div class="content">
 										<header>
-											<h1>Void</h1>
-											<p>NyanContest Void競技</p>
+											<h1>NyanContest</h1>
+											<p>マイナー競技と非公式競技に特化したオンラインコンテスト</p>
 										</header>
-										<!--<h2 id="date"></h2>-->
-										<h2>2021/2/7開始の週</h2>
-										<p>タイムの反映には1分-2分ほどかかります。タイム入力後2分ほどしましたらページをリロードしてください。その際フォームの再送信をしないようお気をつけください。それでも結果が反映されない場合はスーパーリロードをしてください。どうしても結果が反映されないときはTwitterなどでお知らせください。</p>
-										<div class="twitter">
-											<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="NyanContest Void競技に参加しました！締め切りは毎週日曜21時です！" data-url="https://nyanyan.github.io/nyancontest/" data-via="ContestNyan" data-hashtags="nyancontest" data-related="ContestNyan" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-										</div>
-										<ul class="actions">
-											<li><a href="#competition" class="button big">競技開始</a></li>
-										</ul>
+										<p>毎日開催するスピードキューブのオンラインコンテストです。ぜひご参加ください。</p>
+										<p>現在コンテストは開催されていません。コンテスト開催時間は日曜22時から翌週日曜21時です。</p>
 									</div>
 									<span class="image object">
-										<img src=../images/Void.png alt="" />
+										<img src="../images/top.png" alt="" />
 									</span>
-								</section>
-						
-							<!-- Section -->
-								<section>
-									<article id="competition">
-                                        <h2>スクランブル</h2>
-                                        <table>
-                                            <tr><td>Void</td></tr><tr><td>U' B2 R2 D B2 U' L2 U' B2 U L' D' R2 D2 B2 R U' F' L' R2 F Uw</td></tr><tr><td>L2 B2 U' F2 U2 B2 F2 R2 D2 U L R D' B U2 L R2 B' L' U R2 Fw</td></tr><tr><td>B2 L2 R2 D' L2 U B2 U' F2 U' R' U2 F' L' D' R D' B R F R Fw' Uw</td></tr><tr><td>R2 B L2 B' U2 R2 D2 U2 F' U2 F2 U F2 U' L' U' B D2 R F2 U2 Fw</td></tr><tr><td>D2 R2 U F2 D' B2 U' R2 D B2 U' L F U B' D U R2 B U L Uw'</td></tr>
-                                        </table>
-                                        <!---
-										<table>
-											<tbody id="scramble"></tbody>
-                                        </table>
-                                        -->
-										<h2>タイム入力</h2>
-										<p>+2の場合は+2をした後の最終的なタイムを、DNFの場合はDNFと書いてください。</p>
-										<div id="formWrapper">
-											<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdBqQWjQEvyQVozQiqUlZ9JtkxnicYEyFA9CZXE8VZMYmHNAA/formResponse" method="post" name="myForm" target="dummyIframe">
-												<label for="name">名前</label>
-												<input id="name" type="text" name="entry.1794443657" placeholder="Nyanyan" required>
-												<label for="name">1st</label>
-												<input id="1st" type="text" name="entry.1331328678" placeholder="1:23.456" required>
-												<label for="name">2nd</label>
-												<input id="2nd" type="text" name="entry.657132955" placeholder="1:23.456" required>
-												<label for="name">3rd</label>
-												<input id="3rd" type="text" name="entry.1651365421" placeholder="1:23.456" required>
-												<label for="name">4th</label>
-												<input id="4th" type="text" name="entry.638295325" placeholder="1:23.456" required>
-												<label for="name">5th</label>
-												<input id="5th" type="text" name="entry.933075668" placeholder="1:23.456" required>
-												<input class="btn btn-success" type="button" value="送信" onclick="submitForm()"/>
-											</form>
-											<iframe name="dummyIframe" style="display:none;"></iframe>
-										</div>
-										<div id="thxMessage" style="display:none;">
-											<p>送信が完了しました。結果反映まで数分お待ち下さい。</p>
-											<!--
-											<div class="twitter">
-												<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="NyanContest Void競技に参加しました！締め切りは毎週日曜21時です！" data-url="https://nyanyan.github.io/nyancontest/" data-via="ContestNyan" data-hashtags="nyancontest" data-related="ContestNyan" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-											</div>
-											-->
-										</div>
-										<script src="../submit.js"></script>
-										<h2>ランキング</h2>
-										<table>
-                                            <!--<tbody id="ranking"></tbody>-->
-                                            <tr><td>順位</td><td>日時</td><td>名前</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td><td>5th</td><td>平均</td></tr>
-										</table>
-										<h2>先週のランキング</h2>
-										<table>
-                                            <tr><td>順位</td><td>日時</td><td>名前</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td><td>5th</td><td>平均</td></tr>
-											<!--<tbody id="ranking_yesterday"></tbody>-->
-										</table>
 								</section>
 						</div>
 					</div>
@@ -156,7 +95,6 @@
 
                         </div>
                     </div>
-
 			</div>
 
 		<!-- Scripts -->
@@ -165,15 +103,6 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
-			<script src="../assets/js/jquery.csv.js"></script>
-            <!--SCRIPT_REPLACE_HERE-->
 
 	</body>
-
-	<meta name="twitter:card" content="summary" /> <!--①-->
-	<meta name="twitter:site" content="@ContestNyan" /> <!--②-->
-	<meta property="og:url" content="https://nyanyan.github.io/nyancontest/" /> <!--③-->
-	<meta property="og:title" content="NyanContest" /> <!--④-->
-	<meta property="og:description" content="マイナー競技と非公式競技のオンラインコンテスト" /> <!--⑤-->
-	<meta property="og:image" content="https://github.com/Nyanyan/nyancontest/blob/master/images/top.png" /> <!--⑥-->
 </html>
