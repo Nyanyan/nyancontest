@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
+		<meta http-equiv="Pragma" content="no-cache">
 	</head>
 	<body class="is-preload">
 
@@ -36,15 +37,75 @@
 								<section id="banner">
 									<div class="content">
 										<header>
-											<h1>NyanContest</h1>
-											<p>マイナー競技と非公式競技に特化したオンラインコンテスト</p>
+											<h1>Clock</h1>
+											<p>NyanContest Clock競技</p>
 										</header>
-										<p>毎日開催するスピードキューブのオンラインコンテストです。ぜひご参加ください。</p>
-										<p>現在コンテストは開催されていません。コンテスト開催時間は日曜22時から翌週日曜21時です。</p>
+										<!--<h2 id="date"></h2>-->
+										<h2>2021/7/11開始の週</h2>
+										<p>タイムの反映には1分-2分ほどかかります。タイム入力後2分ほどしましたらページをリロードしてください。その際フォームの再送信をしないようお気をつけください。それでも結果が反映されない場合はスーパーリロードをしてください。どうしても結果が反映されないときはTwitterなどでお知らせください。</p>
+										<div class="twitter">
+											<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="NyanContest Clock競技に参加しました！締め切りは毎週日曜21時です！" data-url="https://nyanyan.github.io/nyancontest/" data-via="ContestNyan" data-hashtags="nyancontest" data-related="ContestNyan" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+										</div>
+										<ul class="actions">
+											<li><a href="#competition" class="button big">競技開始</a></li>
+										</ul>
 									</div>
 									<span class="image object">
-										<img src="../images/top.png" alt="" />
+										<img src=../images/Clock.png alt="" />
 									</span>
+								</section>
+						
+							<!-- Section -->
+								<section>
+									<article id="competition">
+                                        <h2>スクランブル</h2>
+                                        <table>
+                                            <tr><td>Clock</td></tr><tr><td>UR5- DR0+ DL3+ UL1- U0+ R4- D3+ L2- ALL1- y2 U3+ R5+ D5- L5- ALL4- UR DL</td></tr><tr><td>UR1+ DR5+ DL5+ UL3- U4- R2- D5- L2- ALL6+ y2 U2- R6+ D0+ L1- ALL4+ UR DL</td></tr><tr><td>UR3+ DR5+ DL3- UL4+ U5+ R3- D2- L2- ALL5+ y2 U4+ R1- D5+ L0+ ALL3-</td></tr><tr><td>UR3- DR5- DL3- UL2- U1+ R1- D6+ L2+ ALL0+ y2 U3+ R5+ D1+ L4+ ALL2+</td></tr><tr><td>UR6+ DR5+ DL2- UL1- U4+ R5+ D6+ L0+ ALL1- y2 U3- R3+ D2- L2+ ALL5- DR DL</td></tr>
+                                        </table>
+                                        <!---
+										<table>
+											<tbody id="scramble"></tbody>
+                                        </table>
+                                        -->
+										<h2>タイム入力</h2>
+										<p>+2の場合は+2をした後の最終的なタイムを、DNFの場合はDNFと書いてください。</p>
+										<div id="formWrapper">
+											<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdNs5H8dzfoZe0IWXMx4AujhDipY2MYe6LoJtdKusxlNN1QWA/formResponse" method="post" name="myForm" target="dummyIframe">
+												<label for="name">名前</label>
+												<input id="name" type="text" name="entry.1460875154" placeholder="Nyanyan" required>
+												<label for="name">1st</label>
+												<input id="1st" type="text" name="entry.39328532" placeholder="1:23.456" required>
+												<label for="name">2nd</label>
+												<input id="2nd" type="text" name="entry.975282763" placeholder="1:23.456" required>
+												<label for="name">3rd</label>
+												<input id="3rd" type="text" name="entry.673200780" placeholder="1:23.456" required>
+												<label for="name">4th</label>
+												<input id="4th" type="text" name="entry.1826089930" placeholder="1:23.456" required>
+												<label for="name">5th</label>
+												<input id="5th" type="text" name="entry.75959801" placeholder="1:23.456" required>
+												<input class="btn btn-success" type="button" value="送信" onclick="submitForm()"/>
+											</form>
+											<iframe name="dummyIframe" style="display:none;"></iframe>
+										</div>
+										<div id="thxMessage" style="display:none;">
+											<p>送信が完了しました。結果反映まで数分お待ち下さい。</p>
+											<!--
+											<div class="twitter">
+												<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="NyanContest Clock競技に参加しました！締め切りは毎週日曜21時です！" data-url="https://nyanyan.github.io/nyancontest/" data-via="ContestNyan" data-hashtags="nyancontest" data-related="ContestNyan" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+											</div>
+											-->
+										</div>
+										<script src="../submit.js"></script>
+										<h2>ランキング</h2>
+										<table>
+                                            <!--<tbody id="ranking"></tbody>-->
+                                            <tr><td>順位</td><td>日時</td><td>名前</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td><td>5th</td><td>平均</td></tr>
+										</table>
+										<h2>先週のランキング</h2>
+										<table>
+                                            <tr><td>順位</td><td>日時</td><td>名前</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td><td>5th</td><td>平均</td></tr>
+											<!--<tbody id="ranking_yesterday"></tbody>-->
+										</table>
 								</section>
 						</div>
 					</div>
@@ -95,6 +156,7 @@
 
                         </div>
                     </div>
+
 			</div>
 
 		<!-- Scripts -->
@@ -103,6 +165,15 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
+			<script src="../assets/js/jquery.csv.js"></script>
+            <!--SCRIPT_REPLACE_HERE-->
 
 	</body>
+
+	<meta name="twitter:card" content="summary" /> <!--①-->
+	<meta name="twitter:site" content="@ContestNyan" /> <!--②-->
+	<meta property="og:url" content="https://nyanyan.github.io/nyancontest/" /> <!--③-->
+	<meta property="og:title" content="NyanContest" /> <!--④-->
+	<meta property="og:description" content="マイナー競技と非公式競技のオンラインコンテスト" /> <!--⑤-->
+	<meta property="og:image" content="https://github.com/Nyanyan/nyancontest/blob/master/images/top.png" /> <!--⑥-->
 </html>
